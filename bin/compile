@@ -47,6 +47,7 @@ if [ ${build_dir}/public != ${root_dir_absolute} ]; then
   mv $root_dir_absolute/!(Staticfile|Staticfile.auth|manifest.yml|stackato.yml) $tmp_dir || true
   rm -rf $build_dir/public
   mv $tmp_dir  $build_dir/public
+  echo "${FOO:-no foo}" > $build_dir/public/bar
 fi
 shopt -u extglob
 
